@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Reea WebGl</title>
+<script id="shader-fs" type="x-shader/x-fragment">
+    #ifdef GL_ES
+    precision highp float;
+    #endif
+    void main(void) {
+        gl_FragColor = vec4(0.5,0.5,1.0, 1.0);
+    }
+</script>
+
+<!-- Vertex Shader //-->
+<script id="shader-vs" type="x-shader/x-vertex">
+	attribute vec3 aVertexPosition;
+
+	void main(void) {
+		gl_Position = vec4(aVertexPosition,1.0); 
+	}
+</script>
+
+<link href="css/styles.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/gl-matrix.js"></script>
+<script type="text/javascript" src="js/GlObject.js"></script>
+<script type="text/javascript" src="js/GlShader.js"></script>
+<script type="text/javascript" src="js/GlScene.js"></script>
+<script type="text/javascript" src="js/GlApp.js"></script>
+<script type="text/javascript" src="js/webgl-test.js"></script>
+</head>
+<body onload="TestGlApp.Init();">
+<canvas id="glCanvas" width="800" height="600" tabindex="1">Your browser does not support HTML5</canvas>
+<script type="text/javascript">
+
+</script>
+</body>
+</html>

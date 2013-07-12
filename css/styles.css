@@ -1,0 +1,152 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 13px;
+	font-family: arial, verdana;
+	min-width: 300px;
+}
+
+/* Circle Text Styles */
+#outerCircleText {
+	/* Optional - DO NOT SET FONT-SIZE HERE, SET IT IN THE SCRIPT */
+	font-style: italic;
+	font-weight: bold;
+	font-family: 'comic sans ms', verdana, arial;
+	color: #000;
+	/* End Optional */
+	
+	/* Start Required - Do Not Edit */
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3000;
+	cursor: default;
+}
+#outerCircleText div {position: relative;}
+#outerCircleText div div {position: absolute;top: 0;left: 0;text-align: center;}
+/* End Required */
+/* End Circle Text Styles */
+
+header{
+	border-bottom: 5px solid #323F5E;
+	height: 100px;
+	display: block;
+	position: relative;
+}
+#logo{
+	border: 5px solid #666;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	display: block;
+	width: 110px;
+	height: 110px;
+	overflow: hidden;
+	border-radius: 60px;
+	background: #FFF url("img/logo.jpg") center center no-repeat;
+	margin: 10px;
+}
+
+.menu{
+    border-radius: 6px 6px 0 0;
+    border: 1px solid #323F5E;
+    border-top-width: 2px;
+    border-bottom: 0;
+    bottom: 0px;
+    left: 150px;
+    margin: 0;
+    position: absolute;
+    font-weight: bold;
+}
+.menu a{
+	color: #000;
+	text-decoration: none;
+	font-size: 13px;
+	display: block;
+	float: left;
+	padding: 5px 10px;
+	text-shadow: 1px 1px 0px rgb(255,255,255);
+}
+.menu a:HOVER{
+	background-color: #CCC;
+}
+.main{
+	display: inline-block;
+	padding: 0px;
+	margin: 0px;
+	border-left: 1px solid #666;
+	white-space: nowrap;
+	position: relative;
+	float: left;
+}
+.main:FIRST-CHILD{
+	border-left: 0;
+}
+
+.main .sub{
+	background-color: #FFFFFF;
+    border: 1px solid #666666;
+    display: none;
+    position: absolute;
+    top: 25px;
+    min-width: 100%;
+    left: -1px;
+}
+.main .sub a{
+	clear: both;
+	display: block;
+	border-bottom: 1px solid #666;
+	float: none;
+}
+.main:HOVER{
+	background-color: #CCC;
+}
+.main:HOVER .sub{
+	display: block;
+}
+.main-content{
+	margin: 20px 0;
+	overflow: hidden;
+}
+.open-door{
+	background-image: url("img/french_door.png");
+	width: 80px;
+	height: 80px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	display: block;
+	overflow: hidden;
+	float: left;
+    animation: close .8s steps(14, end) 1;
+    -webkit-animation: close .8s steps(14, end) 1;
+	
+}
+.open-door:HOVER{
+    animation: open .8s steps(14, end) 1;
+    -webkit-animation: open .8s steps(14, end) 1;
+	background-position: 0 -1120px;
+
+}
+
+@keyframes open{
+from { background-position: 0px 0px; }
+to { background-position: 0 -1120px; }
+}
+@-webkit-keyframes open{
+from { background-position: 0px 0px; }
+to { background-position: 0 -1120px; }
+}
+
+@keyframes close{
+from { background-position: 0 -1120px; }
+to { background-position: 0px 0px; }
+}
+@-webkit-keyframes close{
+from { background-position: 0 -1120px; }
+to { background-position: 0px 0px; }
+}
+
+/* webgl example */
+canvas#glCanvas{
+	border: 1px solid #CCC;
+	margin: 10px auto;
+	display: block;
+}
