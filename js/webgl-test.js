@@ -5,7 +5,7 @@ var TestGlApp = TestGlApp || function(){
 		
 		Init : function(){
 			application = new GlApp();	
-			var scene = application.addScene('glCanvas');
+			scene = application.addScene('glCanvas');
 			//scene.setBgColor(1,0.5,-.5,1.0);
 			var testObj = new GlObject();
 			var vertices =  [
@@ -19,6 +19,9 @@ var TestGlApp = TestGlApp || function(){
 			scene.addObject(testObj);
 			testObj.setData(vertices, indices); 
 			//debugger;
+			application.render();
+		},
+		render : function(){
 			application.render();
 		}
 	};
